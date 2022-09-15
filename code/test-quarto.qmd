@@ -1,0 +1,28 @@
+---
+title: "Test Quarto Doc"
+format: html
+editor: visual
+jupyter: python3
+---
+
+```{python dependencies}
+#| echo: false
+import io
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+```
+
+```{python, data-import}
+zillow_train = pd.read_csv("mothr-ds-python-templates/data/train.csv")
+
+def clean(data:pd.DataFrame): 
+  print(data)
+
+```
+
+```{python figures}
+fig, ax = plt.subplots()
+sns.relplot(data = zillow_train, x = "LotFrontage", y = "LotArea", ax = ax)
+plt.show()
+```

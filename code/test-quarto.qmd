@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 ```
 
 ```{python, data-import}
-zillow_train = pd.read_csv("mothr-ds-python-templates/data/train.csv")
+zillow_train = pd.read_csv("~/mothr-ds-python-templates/data/train.csv")
 
 def clean(data:pd.DataFrame): 
   print(data)
@@ -23,6 +23,6 @@ def clean(data:pd.DataFrame):
 
 ```{python figures}
 fig, ax = plt.subplots()
-sns.relplot(data = zillow_train, x = "LotFrontage", y = "LotArea", ax = ax)
+sns.relplot(data = zillow_train, y = "LotFrontage", x = "LotArea", ax = ax)
 plt.show()
 ```
